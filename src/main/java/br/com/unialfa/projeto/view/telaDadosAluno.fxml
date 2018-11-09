@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="aPaneTelaDadosAlun" prefHeight="453.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaDadosAlunoController">
+<AnchorPane fx:id="aPaneTelaDadosAlun" prefHeight="453.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unialfa.projeto.controller.TelaDadosAlunoController">
    <children>
       <Pane fx:id="paneDadosAluno" prefHeight="473.0" prefWidth="789.0">
          <children>

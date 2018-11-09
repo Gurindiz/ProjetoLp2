@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="aPaneCadastro" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TabCadastrosController">
+<AnchorPane fx:id="aPaneCadastro" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unialfa.projeto.controller.TabCadastrosController">
    <children>
       <TabPane fx:id="tabPaneCad" layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="467.0" prefWidth="604.0" stylesheets="@../../../../../Desktop/INSIDE/tabPane.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <tabs>
@@ -30,6 +30,22 @@
                                  </HBox.margin>
                               </ComboBox>
                               <ToggleButton fx:id="btnAddDocTab" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#addDocumentoTabela" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-border-radius: 100;">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" scaleZ="2.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../../../../../../../docs/plus.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <rotationAxis>
+                                          <Point3D />
+                                       </rotationAxis>
+                                    </ImageView>
+                                 </graphic>
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -69,6 +85,19 @@
                                  </cursor>
                               </ComboBox>
                               <ToggleButton fx:id="btnAddResp" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#addResponsavelFluxo" prefHeight="40.0" prefWidth="45.0" style="-fx-background-radius: 100; -fx-background-color: trasparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../../../../../../../docs/plus.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </graphic>
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -99,7 +128,7 @@
                            </cursor>
                         </ComboBox>
                         <Separator layoutX="222.0" layoutY="33.0" prefHeight="12.0" prefWidth="322.0" />
-                        <TableView fx:id="tblCadDoc" layoutX="33.0" layoutY="191.0" prefHeight="200.0" prefWidth="323.0" style="-fx-background-color: gray;" stylesheets="@../../../../../Desktop/INSIDE/tableView.css">
+                        <TableView fx:id="tblCadDoc" layoutX="33.0" layoutY="191.0" prefHeight="200.0" prefWidth="323.0" stylesheets="@../../../../../../../../docs/TableView.css">
                            <columns>
                               <TableColumn fx:id="colunCadDoc" editable="false" prefWidth="321.0" sortable="false" text="Documentos" />
                            </columns>
@@ -107,7 +136,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </TableView>
-                        <TableView fx:id="tblCadFluxo" layoutX="431.0" layoutY="191.0" prefHeight="200.0" prefWidth="351.0" style="-fx-background-color: gray;" stylesheets="@../../../../../Desktop/INSIDE/tableView.css">
+                        <TableView fx:id="tblCadFluxo" layoutX="431.0" layoutY="191.0" prefHeight="200.0" prefWidth="351.0" style="-fx-background-color: white;" stylesheets="@../../../../../../../../docs/TableView.css">
                            <columns>
                               <TableColumn fx:id="colunCadFluxo" editable="false" prefWidth="349.0" sortable="false" text="Fluxo do processo" />
                            </columns>
@@ -138,6 +167,19 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <graphic>
+                              <ImageView fitHeight="46.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <image>
+                                    <Image url="@../../../../../../../../docs/pesq.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -154,6 +196,27 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ComboBox>
+                        <ToggleButton fx:id="btnBuscaUser" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="445.0" layoutY="40.0" mnemonicParsing="false" onAction="#buscarUsuarios" prefHeight="30.0" prefWidth="38.0" style="-fx-background-radius: 100; -fx-background-color: trasparent;">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <image>
+                                    <Image url="@../../../../../../../../docs/pesq.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ToggleButton>
                         <TextField fx:id="txtNome" layoutX="116.0" layoutY="107.0" prefHeight="25.0" prefWidth="244.0" GridPane.columnIndex="1" />
                         <TextField fx:id="txtMatricula" layoutX="528.0" layoutY="107.0" GridPane.columnIndex="3" />
                         <TextField fx:id="txtUser" layoutX="115.0" layoutY="138.0" />
@@ -254,14 +317,6 @@
                         </Label>
                         <Separator layoutX="214.0" layoutY="28.0" prefHeight="12.0" prefWidth="322.0" />
                         <Label layoutX="23.0" layoutY="142.0" text="Usuário:  *" />
-                        <ToggleButton fx:id="btnBuscTipo1" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="454.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buscarTipoProc" prefHeight="25.0" prefWidth="29.0" style="-fx-background-radius: 100; -fx-border-radius: 100;">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </ToggleButton>
                      </children>
                   </AnchorPane>
                </content>
@@ -291,6 +346,27 @@
                               </Button>
                            </children>
                         </HBox>
+                        <ToggleButton fx:id="btnAddDoc" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="527.0" layoutY="105.0" mnemonicParsing="false" onAction="#addDocumentoLista" prefHeight="40.0" prefWidth="45.0" style="-fx-background-radius: 100; -fx-background-color: trasparent;">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <image>
+                                    <Image url="@../../../../../../../../docs/plus.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ToggleButton>
                         <TableView fx:id="tblDocs" layoutX="191.0" layoutY="169.0" prefHeight="200.0" prefWidth="367.0" style="-fx-background-color: gray;" stylesheets="@../../../../../Desktop/INSIDE/tableView.css">
                           <columns>
                             <TableColumn fx:id="colunDocs" editable="false" prefWidth="365.0" sortable="false" text="Lista de documentos" />
@@ -299,14 +375,6 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </TableView>
-                        <ToggleButton fx:id="btnBuscTipo2" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="532.0" layoutY="112.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buscarTipoProc" prefHeight="25.0" prefWidth="29.0" style="-fx-background-radius: 100; -fx-border-radius: 100;">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </ToggleButton>
                      </children>
                   </AnchorPane>
                </content>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Matrícula" />
+      <TextField layoutX="14.0" layoutY="31.0" />
+      <TextField layoutX="14.0" layoutY="77.0" prefHeight="25.0" prefWidth="335.0" />
+      <Label layoutX="14.0" layoutY="60.0" text="Nome" />
+      <RadioButton layoutX="359.0" layoutY="81.0" mnemonicParsing="false" text="Masc" />
+      <RadioButton layoutX="415.0" layoutY="81.0" mnemonicParsing="false" text="Fem" />
+      <Label layoutX="359.0" layoutY="60.0" text="Sexo" />
+      <ComboBox layoutX="15.0" layoutY="173.0" prefHeight="25.0" prefWidth="335.0" />
+      <Label layoutX="16.0" layoutY="156.0" text="Curso" />
+      <ComboBox layoutX="359.0" layoutY="173.0" prefHeight="25.0" prefWidth="101.0" />
+      <Label layoutX="363.0" layoutY="156.0" text="Período" />
+      <DatePicker layoutX="15.0" layoutY="126.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="14.0" layoutY="109.0" text="Data Nasc." />
+      <Button layoutX="195.0" layoutY="220.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: green;" text="Incluir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="287.0" layoutY="220.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: blue;" text="Alterar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="379.0" layoutY="220.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: red;" text="Excluir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="65.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Código" />
+      <TableView layoutX="14.0" layoutY="161.0" prefHeight="200.0" prefWidth="327.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Código" />
+            <TableColumn prefWidth="255.0" text="Departamento" />
+         </columns>
+      </TableView>
+      <TextField layoutX="13.0" layoutY="79.0" prefHeight="25.0" prefWidth="327.0" />
+      <Label layoutX="13.0" layoutY="62.0" text="Nome Departamento" />
+      <Button layoutX="258.0" layoutY="112.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: red;" text="Excluir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="166.0" layoutY="112.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: blue;" text="Alterar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="74.0" layoutY="112.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: green;" text="Incluir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

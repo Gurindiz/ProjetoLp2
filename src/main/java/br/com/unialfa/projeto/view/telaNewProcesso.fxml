@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="aPanePrincipal" prefHeight="453.0" prefWidth="740.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaNewProcessoController">
+<AnchorPane fx:id="aPanePrincipal" prefHeight="453.0" prefWidth="740.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unialfa.projeto.controller.TelaNewProcessoController">
    <children>
       <Separator layoutX="15.0" layoutY="39.0" prefHeight="0.0" prefWidth="711.0" />
       <Separator layoutX="15.0" layoutY="415.0" prefHeight="0.0" prefWidth="711.0" />

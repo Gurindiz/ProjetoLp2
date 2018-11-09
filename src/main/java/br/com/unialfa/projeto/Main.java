@@ -1,24 +1,36 @@
 package br.com.unialfa.projeto;
 
+import java.net.URL;
+
+import Controller.PainelAdmController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+
 
 public class Main extends Application {
+	PainelAdmController p;
 	@Override
-	public void start(Stage primaryStage) {
-		try {
-			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("view/FXMLPaciente.fxml"));
-			Scene scene = new Scene(root, 1222, 488);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public void start(Stage principal) throws Exception{
+		VBox raiz = new VBox(10); // 1
+		raiz.setAlignment(Pos.CENTER); // 2
+		URL arquivoFXML;
+		arquivoFXML = getClass().getResource("/Visao/inicial.fxml");
+		Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+		Scene cena = new Scene(fxmlParent, 990, 630);
+		principal.resizableProperty().setValue(false);
+		principal.setTitle("Janela Principal");
+		principal.setScene(cena);
+		principal.show();
+
 	}
+
 
 	public static void main(String[] args) {
 		launch(args);
