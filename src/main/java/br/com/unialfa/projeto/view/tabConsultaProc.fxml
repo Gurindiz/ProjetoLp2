@@ -9,7 +9,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="aPaneConsulProc" prefHeight="453.0" prefWidth="801.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unialfa.projeto.controller.TabConsultaProcController">
+<AnchorPane fx:id="aPaneConsulProc" prefHeight="453.0" prefWidth="801.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TabConsultaProcController">
    <children>
       <Label layoutX="14.0" layoutY="76.0" text="Pesquisar por:">
          <font>
@@ -61,7 +61,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <image>
-                  <Image url="@../../../../../../../../docs/pesq.png" />
+                  <Image url="@../../../../../Desktop/INSIDE/pesq.png" />
                </image>
                <viewport>
                   <Rectangle2D />

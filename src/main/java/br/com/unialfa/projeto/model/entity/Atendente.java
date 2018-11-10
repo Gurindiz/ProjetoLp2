@@ -1,5 +1,5 @@
 package br.com.unialfa.projeto.model.entity;
 
-public class Atendente {
+public class Atendente extends Usuarios{
 
 }
