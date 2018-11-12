@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="aPaneCadastro" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unialfa.projeto.controller.TabCadastrosController">
+<AnchorPane fx:id="aPaneCadastro" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TabCadastrosController">
    <children>
       <TabPane fx:id="tabPaneCad" layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="467.0" prefWidth="604.0" stylesheets="@../../../../../Desktop/INSIDE/tabPane.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <tabs>
@@ -36,7 +36,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <image>
-                                          <Image url="@../../../../../../../../docs/plus.png" />
+                                          <Image url="@../../../../../Desktop/INSIDE/plus.png" />
                                        </image>
                                        <viewport>
                                           <Rectangle2D />
@@ -91,7 +91,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <image>
-                                          <Image url="@../../../../../../../../docs/plus.png" />
+                                          <Image url="@../../../../../Desktop/INSIDE/plus.png" />
                                        </image>
                                        <viewport>
                                           <Rectangle2D />
@@ -128,7 +128,7 @@
                            </cursor>
                         </ComboBox>
                         <Separator layoutX="222.0" layoutY="33.0" prefHeight="12.0" prefWidth="322.0" />
-                        <TableView fx:id="tblCadDoc" layoutX="33.0" layoutY="191.0" prefHeight="200.0" prefWidth="323.0" stylesheets="@../../../../../../../../docs/TableView.css">
+                        <TableView fx:id="tblCadDoc" layoutX="33.0" layoutY="191.0" prefHeight="200.0" prefWidth="323.0" style="-fx-background-color: gray;" stylesheets="@../../../../../Desktop/INSIDE/tableView.css">
                            <columns>
                               <TableColumn fx:id="colunCadDoc" editable="false" prefWidth="321.0" sortable="false" text="Documentos" />
                            </columns>
@@ -136,7 +136,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </TableView>
-                        <TableView fx:id="tblCadFluxo" layoutX="431.0" layoutY="191.0" prefHeight="200.0" prefWidth="351.0" style="-fx-background-color: white;" stylesheets="@../../../../../../../../docs/TableView.css">
+                        <TableView fx:id="tblCadFluxo" layoutX="431.0" layoutY="191.0" prefHeight="200.0" prefWidth="351.0" style="-fx-background-color: gray;" stylesheets="@../../../../../Desktop/INSIDE/tableView.css">
                            <columns>
                               <TableColumn fx:id="colunCadFluxo" editable="false" prefWidth="349.0" sortable="false" text="Fluxo do processo" />
                            </columns>
@@ -173,7 +173,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                                  <image>
-                                    <Image url="@../../../../../../../../docs/pesq.png" />
+                                    <Image url="@../../../../../Desktop/INSIDE/pesq.png" />
                                  </image>
                                  <viewport>
                                     <Rectangle2D />
@@ -203,7 +203,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                                  <image>
-                                    <Image url="@../../../../../../../../docs/pesq.png" />
+                                    <Image url="@../../../../../Desktop/INSIDE/pesq.png" />
                                  </image>
                                  <viewport>
                                     <Rectangle2D />
@@ -353,7 +353,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                                  <image>
-                                    <Image url="@../../../../../../../../docs/plus.png" />
+                                    <Image url="@../../../../../Desktop/INSIDE/plus.png" />
                                  </image>
                                  <viewport>
                                     <Rectangle2D />

@@ -11,11 +11,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="paneInicialAdm" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PainelAdmController">
+<Pane fx:id="paneInicialAdm" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PainelAdmController">
 	<children>
 		<BorderPane fx:id="bPanePainel" opacity="0.68" prefHeight="585.0" prefWidth="1000.0" style="-fx-background-color: white;">
 			<right>
-				<GridPane fx:id="gridStatusProc" prefHeight="539.0" prefWidth="205.0" styleClass="..\..\..\..\..\..\..\..\docs\TableView.css" BorderPane.alignment="CENTER">
+				<GridPane fx:id="gridStatusProc" prefHeight="539.0" prefWidth="205.0" BorderPane.alignment="CENTER">
 					<columnConstraints>
 						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 					</columnConstraints>
@@ -32,7 +32,7 @@
 				</GridPane>
 			</right>
 			<center>
-				<TabPane fx:id="tblviewPrincipal" prefHeight="540.0" prefWidth="801.0" stylesheets="@../../../../../../../../docs/TableView.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+				<TabPane fx:id="tblviewPrincipal" prefHeight="540.0" prefWidth="801.0" stylesheets="@../../../../../Desktop/INSIDE/tabPane2.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
 					<tabs>
 						<Tab fx:id="tabProcessos" style="-fx-font-size: 18; -fx-font-family: arial black;" text="PROCESSOS">
 							<content>
@@ -111,7 +111,7 @@
 							<children>
 								<ImageView fitHeight="31.0" fitWidth="40.0">
 									<image>
-										<Image url="@../../../../../../../../docs/USER.png" />
+										<Image url="@../../../../../Desktop/INSIDE/USER.png" />
 									</image>
 								</ImageView>
 								<TextArea fx:id="textUser" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="302.0" HBox.hgrow="ALWAYS">

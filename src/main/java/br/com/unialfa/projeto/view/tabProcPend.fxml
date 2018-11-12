@@ -9,7 +9,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="aPaneProcPend" prefHeight="453.0" prefWidth="801.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unialfa.projeto.controller.TabProcPendController">
+<AnchorPane fx:id="aPaneProcPend" prefHeight="453.0" prefWidth="801.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TabProcPendController">
    <children>
       <Pane fx:id="panePendentes" layoutX="5.0" layoutY="71.0" prefHeight="337.0" prefWidth="790.0">
          <children>
@@ -49,7 +49,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <image>
-                        <Image url="@../../../../../../../../docs/pesq.png" />
+                        <Image url="@../../../../../Desktop/INSIDE/pesq.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
