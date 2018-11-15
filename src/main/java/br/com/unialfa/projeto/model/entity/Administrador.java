@@ -1,5 +1,0 @@
-package br.com.unialfa.projeto.model.entity;
-
-public class Administrador extends Usuarios {
-
-}
