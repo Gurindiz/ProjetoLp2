@@ -42,7 +42,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TableView fx:id="tabAlunosPorbusca" layoutX="36.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="730.0" style="-fx-background-color: gray;" stylesheets="@../../docs/TableView.css">
+      <TableView fx:id="tabAlunosPorbusca" layoutX="36.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="730.0" style="-fx-background-color: #eee;" stylesheets="@../../docs/TableView.css">
          <columns>
             <TableColumn fx:id="colunMatric" editable="false" prefWidth="178.0" style="-fx-alignment: Center;" text="Matrícula" />
             <TableColumn fx:id="colunNome" editable="false" prefWidth="364.0" style="-fx-alignment: Center;" text="Nome" />

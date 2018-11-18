@@ -7,7 +7,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="src/lib/controlsfx-8.40.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/muril/eclipse-workspace/INSIDE/INSIDE/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="lib" path="src/lib/mysql-connector-java-5.1.41-bin.jar"/>
+	<classpathentry kind="lib" path="docs/controlsfx-9.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

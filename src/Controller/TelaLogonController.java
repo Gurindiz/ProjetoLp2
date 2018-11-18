@@ -148,11 +148,12 @@ public class TelaLogonController implements Initializable{
 		if(msg.equals("")||msg==null){
 			sb.append("Digite o Usuário!\n");
 			controls.add(txtUsuario);
+			animaCamposValidados(controls);
 		}
 		if(msg2.equals("")||msg2==null){
 			sb.append("Digite a senha!\n");
 			controls.add(txtSenha);
-
+			animaCamposValidados(controls);
 		}
 		return sb.toString().isEmpty();
 	}
