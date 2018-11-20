@@ -57,7 +57,7 @@ public class AdmNegocio {
         if (!emailValido) {
             sb.append("email inválido. \n");
         }
-        if(!chegarUsuario(adm)){
+        if(chegarUsuario(adm)){
         	sb.append("Digite outro nome de usuário!\n");
         }
         if (sb.toString().isEmpty()) {

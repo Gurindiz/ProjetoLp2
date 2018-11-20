@@ -24,7 +24,7 @@
 						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 					</rowConstraints>
 					<children>
-						<TableView fx:id="tblStatusProc" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="178.0" style="-fx-background-color: white; -fx-border-color: gray;" stylesheets="@../../../../../Desktop/INSIDE/tableView%20STATUS.css" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+						<TableView fx:id="tblStatusProc" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="178.0" style="-fx-background-color: white; -fx-border-color: gray;" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
 							<columns>
 								<TableColumn fx:id="colunStatusProc" editable="false" minWidth="0.0" prefWidth="199.0" text="PROCESSOS PENDENTES" />
 							</columns>
@@ -51,7 +51,7 @@
 						</Tab>
 					</tabs>
                <stylesheets>
-                  <URL value="@../../../../../Desktop/INSIDE/tabPane2.css" />
+                  <URL value="@../../docs/TableView.css" />
                   <URL value="@../../docs/TableView.css" />
                </stylesheets>
 				</TabPane>

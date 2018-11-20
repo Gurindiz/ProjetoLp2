@@ -142,6 +142,7 @@ public class TabAbrirNovoProcController implements Initializable {
 		tabAlunosPorbusca.getItems().removeAll();
 		tabAlunosPorbusca.setItems(aluView);
 		comboTipoPesquiAluno.setValue("Selecione um item");
+		txtPesqAluno.setText("");
 
 	}
 	@FXML

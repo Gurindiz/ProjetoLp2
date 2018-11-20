@@ -111,7 +111,7 @@ public class AdmDao {
 
 		return salvo;
 	}
-
+   ///teste
 	public List<Administrador> listarAdms() {
 		List<Administrador> list = new ArrayList<Administrador>();
 		ResultSet res = null;

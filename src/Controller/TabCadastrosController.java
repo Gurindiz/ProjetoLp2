@@ -125,7 +125,7 @@ public class TabCadastrosController implements Initializable {
 	@FXML
 	private AnchorPane aPaneUser;
 	@FXML
-	private ComboBox comboBuscaUser;
+	private ComboBox<String> comboBuscaUser;
 	@FXML
 	private ToggleButton btnBuscaUser;
 	@FXML
@@ -170,6 +170,8 @@ public class TabCadastrosController implements Initializable {
 	private HBox hbCrudDoc;
 	@FXML
 	private Button btnSalvarDoc;
+	@FXML
+	private Button btnExcluirDoc1;
 	@FXML
 	private ToggleButton btnAddDoc;
 	@FXML
@@ -220,12 +222,16 @@ public class TabCadastrosController implements Initializable {
 		adm.setTelefone(txtTelefone.getText());
 		adm.setMatricula(txtMatricula.getText());
 		RadioButton rb = new RadioButton();
-		rb =(RadioButton) groupSexo.getSelectedToggle();
-		adm.setSexo(rb.getText());
+		if (groupSexo.getSelectedToggle() != null) {
+			rb = (RadioButton) groupSexo.getSelectedToggle();
+			adm.setSexo(rb.getText());
+		}else {
+			rb = null;
+		}
 		adm.setEmail(txtEmail.getText());
-		adm.setCargo(comboCargo.getValue().toString());
-		adm.setDepartamento(comboDepart.getValue().toString());
-		adm.setTipoUser(comboTipoUser.getValue().toString());
+		adm.setCargo(comboCargo.getValue() != null ? comboCargo.getValue().toString() : null);
+		adm.setDepartamento(comboCargo.getValue() != null ? comboCargo.getValue().toString() : null);
+		adm.setTipoUser(comboTipoUser.getValue() != null ? comboTipoUser.getValue().toString() : null);
 		if(adm.getId()==0){
 			adm.setSenha("123456");
 		}
@@ -244,7 +250,7 @@ public class TabCadastrosController implements Initializable {
 					String msg = "Usuário inserido!";
 					exibeMensagem(msg);
 					limpaCampos();
-					comboBuscaUser.getItems().removeAll(true);
+					comboBuscaUser.getItems().clear();
 					preencherComboFluxo();
 				}else{
 					exibeMensagem(validar);
@@ -253,13 +259,13 @@ public class TabCadastrosController implements Initializable {
 				validar = admNegocio.editar(adm);
 				if (validar.equals("salvo")) {
 
-					String msg = "Objeto editado com sucesso!";
+					String msg = "Usuário editado com sucesso!";
 					exibeMensagem(msg);
 
 					limpaCampos();
 					btnAlterarUser.setText("Alterar");
-					comboBuscaUser.getItems().removeAll(true);
-					preencherComboFluxo();
+					comboBuscaUser.getItems().removeAll();
+					//preencherComboFluxo();
 				}else{
 					exibeMensagem(validar);
 				}
@@ -340,7 +346,7 @@ public class TabCadastrosController implements Initializable {
 			sb.append("A matrícula não pode estar vazio!. \n");
 			controls.add(txtMatricula);
 		}
-		if(rb.equals("") || rb == null){
+		if(rb == null || rb.equals("")){
 			sb.append("Selecione o sexo!. \n");
 			controls.add(rbMasculino);
 			controls.add(rbFeminino);
@@ -349,19 +355,19 @@ public class TabCadastrosController implements Initializable {
 			sb.append("O E-mail não pode estar vazio!. \n");
 			controls.add(txtEmail);
 		}
-		if(cargo.equals("") || cargo == null){
+		if(cargo == null || cargo.equals("")){
 			sb.append("Selecione um cargo! . \n");
 			controls.add(comboCargo);
 		}
-		if(Departamento.equals("") || Departamento == null){
+		if(Departamento == null || Departamento.equals("")){
 			sb.append("Selecione um departamento! . \n");
 			controls.add(comboDepart);
 		}
-		if(TipoUser.equals("") || TipoUser == null){
+		if(TipoUser == null || TipoUser.equals("")){
 			sb.append("Selecione o tipo de usuário! . \n");
 			controls.add(comboTipoUser);
 		}
-		if(!sb.equals("")) {
+		if (sb.length() != 0) {
 			exibeMensagem(sb.toString());
 			animaCamposValidados(controls);
 		}

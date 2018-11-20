@@ -12,7 +12,7 @@
 
 <AnchorPane fx:id="aPaneAbrirPro" prefHeight="453.0" prefWidth="740.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TabAbrirNovoProcController">
    <children>
-      <Button fx:id="btnAbrirAlunoView" layoutX="685.0" layoutY="306.0" mnemonicParsing="false" onAction="#abrirViewAluno" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: green;" text="ABRIR" textFill="WHITE">
+      <Button fx:id="btnAbrirAlunoView" layoutX="685.0" layoutY="360.0" mnemonicParsing="false" onAction="#abrirViewAluno" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: green;" text="ABRIR" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -32,17 +32,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ComboBox>
-      <Button layoutX="36.0" layoutY="150.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="730.0" stylesheets="@../../../../../Desktop/INSIDE/teste.css" text="ALUNO" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Button>
       <Text fx:id="textProcAberto1" layoutX="342.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSCAR ALUNO" wrappingWidth="118.3310546875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TableView fx:id="tabAlunosPorbusca" layoutX="36.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="730.0" style="-fx-background-color: #eee;" stylesheets="@../../docs/TableView.css">
+      <TableView fx:id="tabAlunosPorbusca" layoutX="36.0" layoutY="113.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="730.0" style="-fx-background-color: #eee;" stylesheets="@../../docs/TableView.css">
          <columns>
             <TableColumn fx:id="colunMatric" editable="false" prefWidth="178.0" style="-fx-alignment: Center;" text="Matrícula" />
             <TableColumn fx:id="colunNome" editable="false" prefWidth="364.0" style="-fx-alignment: Center;" text="Nome" />
