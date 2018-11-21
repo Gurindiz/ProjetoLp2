@@ -141,7 +141,82 @@ public class AlunosDao {
 		}
 		return list;
 	}
+	
+	public List<Aluno> listarAlunosMatricula(String matricula) {
+		List<Aluno> list = new ArrayList<>();
+		ResultSet res = null;
 
+		try {
+			stm = con.createStatement();
+			res = stm.executeQuery("select * from alunos Where Matricula like '%" + matricula + "%'");
+
+			while (res.next()){
+
+				Aluno alu = new Aluno();
+				
+				
+				alu.setId(res.getInt("id"));
+				alu.setNome(res.getString("nome"));
+				alu.setCpf(res.getString("cpf"));
+				alu.setTelefone(res.getString("telefone"));
+				alu.setMatricula(res.getString("matricula"));
+				alu.setEmail(res.getString("email"));
+				alu.setSexo(res.getString("sexo"));
+				alu.setCurso(res.getString("curso"));
+				alu.setEnder(res.getString("ender"));
+				alu.setResponsavel(res.getString("respons"));
+				alu.setCity(res.getString("city"));
+				Date dataNascimento = res.getDate("dataNasci");
+				alu.setDataNasci(dataNascimento.toLocalDate());
+				
+			
+
+				list.add(alu);
+			}
+		}
+		catch (SQLException e){
+			System.out.println("Erro na consulta1:" + e.getMessage());
+		}
+		return list;
+	}
+
+	public List<Aluno> listarAlunosCpf(String cpf) {
+		List<Aluno> list = new ArrayList<>();
+		ResultSet res = null;
+
+		try {
+			stm = con.createStatement();
+			res = stm.executeQuery("select * from alunos Where CPF like '%" + cpf + "%'");
+
+			while (res.next()){
+
+				Aluno alu = new Aluno();
+				
+				
+				alu.setId(res.getInt("id"));
+				alu.setNome(res.getString("nome"));
+				alu.setCpf(res.getString("cpf"));
+				alu.setTelefone(res.getString("telefone"));
+				alu.setMatricula(res.getString("matricula"));
+				alu.setEmail(res.getString("email"));
+				alu.setSexo(res.getString("sexo"));
+				alu.setCurso(res.getString("curso"));
+				alu.setEnder(res.getString("ender"));
+				alu.setResponsavel(res.getString("respons"));
+				alu.setCity(res.getString("city"));
+				Date dataNascimento = res.getDate("dataNasci");
+				alu.setDataNasci(dataNascimento.toLocalDate());
+				
+			
+
+				list.add(alu);
+			}
+		}
+		catch (SQLException e){
+			System.out.println("Erro na consulta1:" + e.getMessage());
+		}
+		return list;
+	}
 
 }
 

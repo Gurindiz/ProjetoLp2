@@ -75,9 +75,10 @@ public class ProcessosNegocio {
 
 		proList=proDao.listarTipoProc();
 		for(TipoProcesso pro2:proList){
-			if(pro.getNome().equalsIgnoreCase(pro2.getNome()));
-			salvo="Esse nome ja existe na lista!";
-			return false;
+			if(pro.getNome().equalsIgnoreCase(pro2.getNome())) {
+				salvo="Esse nome ja existe na lista!";
+				return false;
+			};
 		}
 		return true;
 	}

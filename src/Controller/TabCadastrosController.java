@@ -512,7 +512,7 @@ public class TabCadastrosController implements Initializable {
 					e.printStackTrace();
 				}
 				if(validar.equals("salvo")){
-					populaViewDocs();
+					//populaViewDocs();
 					if(cont<1){
 						String msg = "Documentos salvos com sucesso!";
 						exibeMensagem(msg);
@@ -540,7 +540,7 @@ public class TabCadastrosController implements Initializable {
 			if(validar.equals("excluido")){
 				String msg = "Documentos excluido com sucesso!";
 				exibeMensagem(msg);
-				populaViewDocs();
+				//populaViewDocs();
 			}else{
 				exibeMensagem("Falha!!!");
 			}
@@ -573,6 +573,7 @@ public class TabCadastrosController implements Initializable {
 
 	@FXML
 	public void populaComboDoc(){
+		//comboDocumentos.
 		docList.forEach( doc1 -> {
 			comboDocumentos.getItems().add(doc1.getNome());
 		}
@@ -684,6 +685,7 @@ public class TabCadastrosController implements Initializable {
 			salvo= procNeg.salvar(tiProc,listAdm2,docList2);
 			if(salvo.equals("salvo")){
 				exibeMensagem("Tipo de processo salvo com sucesso!");
+				limpaCamposTipoProcesso();
 				preencherComboTiProc();
 				
 			}else{
@@ -751,6 +753,16 @@ public class TabCadastrosController implements Initializable {
 			exibeMensagem("Falhar!");
 		}
 
+	}
+	
+	public void limpaCamposTipoProcesso() {
+
+		txtNomeProc.setText("");
+		txtDescricao.setText("");
+		comboDocumentos.setValue("Selecione o documento");
+		comboUser.setValue("Selecione um usuário");
+		
+		comboTiposProc.requestFocus();
 	}
 
 	public void exibeMensagem(String msg){

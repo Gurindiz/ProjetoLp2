@@ -101,7 +101,7 @@ public class TipoProcDao {
                     salvo = "\"Erro na transação!\"+e2";
                 }
             }
-            System.out.println("erro na execuÃ§Ã£o: " + e.getMessage());
+            System.out.println("erro na execucao: " + e.getMessage());
         } finally {
             if (stmt != null) {
                 stmt.close();

@@ -103,28 +103,18 @@ public class TabAbrirNovoProcController implements Initializable {
 		}else{
 			if(pesq.equals("Nome")){
 				listAlu= aluDao.listarAlunosNome(txtPesqAluno.getText());
-				//alu = listAlu.get(0);
 				populaViewAluno();
-			}else{
-				if(pesq.trim().equals("Matrícula")){
-					for(Aluno alu2:listAlu){
-						if(alu2.getMatricula().equals(txtPesqAluno.getText())){
-							alu=alu2;	
-							populaViewAluno();
-						}	
-					}
-				}else{
-					if(pesq.trim().equals("CPF")){
-						for(Aluno alu2:listAlu){
-							if(alu2.getCpf().equals(txtPesqAluno.getText())){
-								alu=alu2;
-								populaViewAluno();
-							}
-						}
-					}
-				}
+			}else if(pesq.trim().equals("Matrícula"))
+			{
+				listAlu= aluDao.listarAlunosMatricula(txtPesqAluno.getText());
+				populaViewAluno();
+			}else if(pesq.trim().equals("CPF"))
+			{
+				listAlu= aluDao.listarAlunosCpf(txtPesqAluno.getText());
+				populaViewAluno();
 			}
-			if(alu.getId()==0){
+
+			if(listAlu.size()==0){
 				exibeMensagem("Aluno não encontrado!");
 			}
 		}
