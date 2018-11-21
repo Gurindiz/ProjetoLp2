@@ -57,7 +57,7 @@ public class TabAbrirNovoProcController implements Initializable {
 	private TableColumn<Aluno,String> colunCpf;
 	@FXML
 	private ToggleButton btnBuscar;
-	
+
 	Aluno alu = new Aluno();
 	AlunosDao aluDao = new AlunosDao();
 	List<Aluno> listAlu = new ArrayList<>() ;
@@ -69,7 +69,7 @@ public class TabAbrirNovoProcController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		preencherTipoPesq();
-        //padm.populaStatusProc();
+		//padm.populaStatusProc();
 
 	}
 
@@ -89,7 +89,7 @@ public class TabAbrirNovoProcController implements Initializable {
 		proc.add("Nome");
 		proc.add("CPF");
 		comboTipoPesquiAluno.getItems().addAll(proc);
-		
+
 	}
 	@FXML
 	public void buscarAluno(ActionEvent event) {
@@ -102,12 +102,9 @@ public class TabAbrirNovoProcController implements Initializable {
 			exibeMensagem("Selecione o tipo de pesquisa!");
 		}else{
 			if(pesq.equals("Nome")){
-				for( Aluno alu2:listAlu){
-					if(alu2.getNome().equalsIgnoreCase(txtPesqAluno.getText())){
-						alu=alu2;
-						populaViewAluno();
-					}
-				}
+				listAlu= aluDao.listarAlunosNome(txtPesqAluno.getText());
+				//alu = listAlu.get(0);
+				populaViewAluno();
 			}else{
 				if(pesq.trim().equals("Matrícula")){
 					for(Aluno alu2:listAlu){
@@ -138,7 +135,7 @@ public class TabAbrirNovoProcController implements Initializable {
 		colunMatric.setCellValueFactory(new PropertyValueFactory<Aluno, String>("Matricula"));
 		colunNome.setCellValueFactory(new PropertyValueFactory<Aluno, String>("Nome"));
 		colunCpf.setCellValueFactory(new PropertyValueFactory<Aluno, String>("cpf"));
-		aluView = FXCollections.observableArrayList(alu);
+		aluView = FXCollections.observableArrayList(listAlu);
 		tabAlunosPorbusca.getItems().removeAll();
 		tabAlunosPorbusca.setItems(aluView);
 		comboTipoPesquiAluno.setValue("Selecione um item");
@@ -147,14 +144,19 @@ public class TabAbrirNovoProcController implements Initializable {
 	}
 	@FXML
 	public void abrirViewAluno(ActionEvent event) throws Exception {
-		aluC.recuperarAluno(alu);
-		URL arquivoFXML;
-		arquivoFXML = getClass().getResource("/Visao/telaDadosAluno.fxml");
-		Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
-		aPaneAbrirPro.getChildren().clear();
-		aPaneAbrirPro.getChildren().add(fxmlParent);
+		alu = tabAlunosPorbusca.getSelectionModel().getSelectedItem();
+		if(alu != null) {
+			aluC.recuperarAluno(alu);
+			URL arquivoFXML;
+			arquivoFXML = getClass().getResource("/Visao/telaDadosAluno.fxml");
+			Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+			aPaneAbrirPro.getChildren().clear();
+			aPaneAbrirPro.getChildren().add(fxmlParent);
+		}else {
+			exibeMensagem("Selecione um aluno!");
+		}
 	}
-	
+
 	public void exibeMensagem(String msg){
 
 
@@ -186,6 +188,6 @@ public class TabAbrirNovoProcController implements Initializable {
 		}
 	}
 
-	
+
 
 }

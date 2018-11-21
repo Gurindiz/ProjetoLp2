@@ -621,7 +621,11 @@ public class TabCadastrosController implements Initializable {
 	public void excluirDocumentosListProc(ActionEvent event) throws SQLException {
 		doc = new Documentos();
 		doc =  (Documentos) tblCadDoc.getSelectionModel().getSelectedItem();
-		tblCadDoc.getItems().remove(doc);
+		//tblCadDoc.getItems().remove(doc);
+		docView.remove(doc);
+		docList2.remove(doc);
+		tblCadDoc.getItems().removeAll();
+		tblCadDoc.setItems(docView);
 		exibeMensagem("Documento excluido da lista!");
 	}
 	public void preencherComboFluxo(){
@@ -657,7 +661,10 @@ public class TabCadastrosController implements Initializable {
 	public void excluirFluxo(ActionEvent event) {
 		adm = new Administrador();
 		adm =  (Administrador) tblCadFluxo.getSelectionModel().getSelectedItem();
-		tblCadFluxo.getItems().remove(adm);
+		userView.remove(adm);
+		listAdm2.remove(adm);
+		tblCadFluxo.getItems().removeAll();
+		tblCadFluxo.setItems(userView);
 		exibeMensagem("Usuário excluido da lista!");
 	}
 	public void listarUser(String nome){
@@ -670,7 +677,7 @@ public class TabCadastrosController implements Initializable {
 
 	@FXML
 	public void salvarProcesso(ActionEvent e) throws SQLException{
-		if(btnSalvarProc.equals("Salvar")){
+		if(btnSalvarProc.getText().equalsIgnoreCase("Salvar")){
 			String salvo = "falha!";
 			tiProc.setNome(txtNomeProc.getText());
 			tiProc.setDescricao(txtDescricao.getText());

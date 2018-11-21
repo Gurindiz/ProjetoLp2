@@ -115,6 +115,7 @@ public class TelaDadosAlunoController implements Initializable{
 	}
 	@FXML
 	public void setarAluno(){
+		
 		txtNome.setText(alu.getNome());
 		txtCity.setText(alu.getCity());
 		txtCpf.setText(alu.getCpf());
